@@ -46,7 +46,7 @@ pipeline {
                 input 'Deploy to Production?'
                 milestone(1)
                 script {
-                  sh "kubectl --kubeconfig=/home/julesyoum/.kube/config apply -f train-schedule-kube.yml"
+                  sh "kubectl --kubeconfig=/var/lib/jenkins/secrets/config apply -f train-schedule-kube.yml"
                     }
             }
         }
